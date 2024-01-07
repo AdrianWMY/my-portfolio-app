@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import { Button } from '@/components/ui/button';
 import './App.css';
 import {
@@ -9,40 +7,114 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Container, Mail, GraduationCap, FileCode } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import Navbar from './components/navbar';
 
 function App() {
-  const [count, setCount] = useState(0);
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
+  9;
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <div>
-        <Button>Click me</Button>
-      </div>
+      {/* <div className="container"> */}
+      <Navbar></Navbar>
+      <section>
+        <div className="mt-[100px] w-2/3 m-auto flex justify-between">
+          <div className="w-full max-w-[400px]">
+            <img className="rounded-full" src="public/testing.png" alt="" />
+          </div>
+
+          <div className="mt-[80px]">
+            <span className="text-white text-lg text-slate-500">
+              Hello, I'm
+            </span>
+            <h1 className="text-white text-2xl mt-2">Adrian Wang</h1>
+            <h2 className="text-white text-xl mt-2 text-slate-400">
+              Frontend Developer
+            </h2>
+            <Button className="mt-3 me-3 rounded-lg hover:bg-gray-700">
+              Download CV
+            </Button>
+            <Button className="mt-3 me-3 rounded-lg hover:bg-gray-700">
+              Contact Info
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-[100px]">
+        <h1 className="text-white text-4xl">About Me</h1>
+        <div className="flex mt-[100px]">
+          <div className="w-full max-w-[380px] mr-6">
+            <img className="rounded-3xl" src="public/testing-2.png" alt="" />
+          </div>
+          <div className="w-2/3 grid grid-rows-2 text-slate-400 pt-10">
+            <div className="grid grid-cols-2 justify-items-center content-center">
+              <div className="grid content-center w-80 h-40 border border-white-600 rounded-2xl ">
+                <GraduationCap className="m-auto w-10 h-10 text-white" />
+                <span className="text-xl text-white">Education</span>
+                <span className="">Bachelors Degree of Computer Science</span>
+              </div>
+              <div className="grid content-center w-80 h-40 border border-white-600 rounded-2xl ">
+                <FileCode className="m-auto w-10 h-10 text-white" />
+                <span className="text-xl text-white">Experience</span>
+                <span className="">1 year Frontend Development</span>
+              </div>
+            </div>
+            <p className="text-start ps-8 pt-8">
+              Passionate and ambitious computer science graduate with a strong
+              foundation in programming languages. Seeking a full-time web
+              developer position to apply my skills in web application
+              development. I am highly motivated to contribute to the creation
+              of innovative solutions and make a positive impact.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* </div> */}
+      {/* <Navbar></Navbar>
+
+      <Card className="w-1/2 mx-auto text-start">
+        <CardHeader>
+          <CardTitle className="">Create an Account</CardTitle>
+          <CardDescription className="">
+            Enter your email below to create your account
+          </CardDescription>
+          <div className="flex justify-center">
+            <Button className="w-1/2 me-10" variant="outline">
+              <Mail className="mr-2 h-4 w-4" />
+              Github
+            </Button>
+            <Button className="w-1/2" variant="outline">
+              <Mail className="mr-2 h-4 w-4" />
+              Goole
+            </Button>
+          </div>
+        </CardHeader>
+        <CardContent>
+          <Label htmlFor="email" className="">
+            Email
+          </Label>
+          <Input id="email" placeholder="email" />
+        </CardContent>
+        <CardFooter>
+          <Button className="w-3/4 m-auto">Click me</Button>
+        </CardFooter>
+      </Card>
 
       <Accordion type="single" collapsible>
         <AccordionItem
@@ -65,7 +137,7 @@ function App() {
             for delivery to your door, plus we’re open 24/7.
           </AccordionContent>
         </AccordionItem>
-      </Accordion>
+      </Accordion> */}
     </>
   );
 }
