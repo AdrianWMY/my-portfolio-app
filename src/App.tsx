@@ -15,7 +15,13 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Container, Mail, GraduationCap, FileCode } from 'lucide-react';
+import {
+  Container,
+  Mail,
+  GraduationCap,
+  FileCode,
+  BadgeCheck,
+} from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import Navbar from './components/navbar';
@@ -29,7 +35,6 @@ function App() {
 
   return (
     <>
-      {/* <div className="container"> */}
       <Navbar></Navbar>
       <section>
         <div className="mt-[100px] w-2/3 m-auto flex justify-between">
@@ -57,23 +62,23 @@ function App() {
 
       <section className="mt-[100px]">
         <h1 className="text-white text-4xl">About Me</h1>
-        <div className="flex mt-[100px]">
+        <div className="flex flex-wrap md:flex-nowrap   mt-[100px] ">
           <div className="w-full max-w-[380px] mr-6">
             <img className="rounded-3xl" src="public/testing-2.png" alt="" />
           </div>
-          <div className="w-2/3 grid grid-rows-2 text-slate-400 pt-10">
-            <div className="grid grid-cols-2 justify-items-center content-center">
-              <div className="grid content-center w-80 h-40 border border-white-600 rounded-2xl ">
-                <GraduationCap className="m-auto w-10 h-10 text-white" />
-                <span className="text-xl text-white">Education</span>
-                <span className="">Bachelors Degree of Computer Science</span>
-              </div>
-              <div className="grid content-center w-80 h-40 border border-white-600 rounded-2xl ">
-                <FileCode className="m-auto w-10 h-10 text-white" />
-                <span className="text-xl text-white">Experience</span>
-                <span className="">1 year Frontend Development</span>
-              </div>
+          <div className="w-2/3 flex flex-wrap justify-around text-slate-400 pt-10">
+            {/* <div className="grid grid-cols-2 justify-items-center content-center"> */}
+            <div className="grid content-center w-80 h-40 border border-white-600 rounded-2xl ">
+              <GraduationCap className="m-auto w-10 h-10 text-white" />
+              <span className="text-xl text-white">Education</span>
+              <span className="">Bachelors Degree of Computer Science</span>
             </div>
+            <div className="grid content-center w-80 h-40 border border-white-600 rounded-2xl ">
+              <FileCode className="m-auto w-10 h-10 text-white" />
+              <span className="text-xl text-white">Experience</span>
+              <span className="">1 year Frontend Development</span>
+            </div>
+            {/* </div> */}
             <p className="text-start ps-8 pt-8">
               Passionate and ambitious computer science graduate with a strong
               foundation in programming languages. Seeking a full-time web
@@ -85,6 +90,96 @@ function App() {
         </div>
       </section>
 
+      <section className="mt-[100px]">
+        <h1 className="text-white text-4xl mb-[60px]"> Experience</h1>
+        <div className="grid grid-cols-3 place-content-around justify-items-center max-w-[800px] m-auto h-72 border border-white-600 rounded-2xl ">
+          <div className="text-white flex w-40  ">
+            <BadgeCheck />
+            <span className=" ms-5 text-xl">HTML</span>
+          </div>
+
+          <div className="text-white flex w-40  ">
+            <BadgeCheck />
+            <span className=" ms-5 text-xl">CSS</span>
+          </div>
+          <div className="text-white flex w-40  ">
+            <BadgeCheck />
+            <span className=" ms-5 text-xl">JavaScript</span>
+          </div>
+
+          <div className="text-white flex w-40 ">
+            <BadgeCheck />
+            <span className=" ms-5 text-xl">React</span>
+          </div>
+
+          <div className="text-white flex w-40 ">
+            <BadgeCheck />
+            <span className=" ms-5 text-xl">Bootstrap</span>
+          </div>
+          <div className="text-white flex w-40 ">
+            <BadgeCheck />
+            <span className=" ms-5 text-xl">Tailwind</span>
+          </div>
+          <div className="text-white flex w-40 ">
+            <BadgeCheck />
+            <span className=" ms-5 text-xl">Java</span>
+          </div>
+
+          <div className="text-white flex w-40 ">
+            <BadgeCheck />
+            <span className=" ms-5 text-xl">PHP</span>
+          </div>
+          <div className="text-white flex w-40 ">
+            <BadgeCheck />
+            <span className=" ms-5 text-xl">Git</span>
+          </div>
+        </div>
+      </section>
+      <section className="mt-[100px]">
+        <h1 className="text-white text-4xl mb-[60px]"> Projects</h1>
+
+        <div className="flex justify-around">
+          <div className="w-full max-w-[300px] pt-4 border rounded-3xl">
+            <img
+              className="w-2/3 m-auto rounded-3xl"
+              src="public/Screen Shot 2024-02-18 at 10.55.37 am.png"
+              alt=""
+            />
+            <div className="mt-2 text-white ">Project One</div>
+            <div>
+              <Button className="mt-3 me-3 rounded-lg hover:bg-gray-700">
+                Live Demo
+              </Button>
+            </div>
+          </div>
+          <div className="w-full max-w-[300px] pt-4 border rounded-3xl">
+            <img
+              className="w-2/3 m-auto rounded-3xl"
+              src="public/Screen Shot 2024-02-18 at 10.55.37 am.png"
+              alt=""
+            />
+            <div className="mt-2 text-white ">Project One</div>
+            <div>
+              <Button className="mt-3 me-3 rounded-lg hover:bg-gray-700">
+                Live Demo
+              </Button>
+            </div>
+          </div>
+          <div className="w-full max-w-[300px] pt-4 border rounded-3xl">
+            <img
+              className="w-2/3 m-auto rounded-3xl"
+              src="public/Screen Shot 2024-02-18 at 10.55.37 am.png"
+              alt=""
+            />
+            <div className="mt-2 text-white ">Project One</div>
+            <div>
+              <Button className="mt-3 me-3 rounded-lg hover:bg-gray-700">
+                Live Demo
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* </div> */}
       {/* <Navbar></Navbar>
 
