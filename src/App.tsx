@@ -30,6 +30,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import Navbar from './components/navbar';
+import ContactForm from './components/ContactForm';
 
 function App() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -38,9 +39,9 @@ function App() {
     setIsOpen(!isOpen);
   };
 
-  const testingstyle = {
-    backgroundColor: 'red',
-  };
+  // const testingstyle = {
+  //   backgroundColor: 'red',
+  // };
 
   const handleDownload = () => {
     // Construct the relative URL to the PDF file
@@ -84,7 +85,7 @@ function App() {
       </section>
 
       <section className="mt-[100px]" id="about">
-        <h1 className="text-white text-4xl">ABOUT ME</h1>
+        <h1 className="text-white text-3xl">ABOUT ME</h1>
         <div className="flex flex-wrap md:flex-nowrap justify-center  mt-[100px] ">
           <div className="w-full max-w-[380px]">
             <img className="rounded-3xl" src="public/testing-2.png" alt="" />
@@ -112,7 +113,7 @@ function App() {
       </section>
 
       <section className="mt-[100px]" id="skills">
-        <h1 className="text-white text-4xl mb-[60px]"> SKILLS</h1>
+        <h1 className="text-white text-3xl mb-[60px]"> SKILLS</h1>
         <div className="grid sm:grid-cols-3 grid-cols-2 place-content-around justify-items-center max-w-[800px] m-auto h-72 border border-white-600 rounded-2xl ">
           <Badge skillName="HTML" />
           <Badge skillName="CSS" />
@@ -126,7 +127,7 @@ function App() {
         </div>
       </section>
       <section className="mt-[100px]" id="projects">
-        <h1 className="text-white text-4xl mb-[60px]"> PROJECTS</h1>
+        <h1 className="text-white text-3xl mb-[60px]"> PROJECTS</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center gap-10">
           <CusCard
             imageUrl={'public/Screen Shot 2024-02-18 at 10.55.37 am.png'}
@@ -145,51 +146,18 @@ function App() {
         </div>
       </section>
 
-      <section id="contactMe" className="mt-5" style={testingstyle}>
-        <div className="bg-danger">This is testing contact infor section</div>
+      <section id="contactMe" className="mt-20">
+        <h1 className="text-white text-3xl mb-[60px]">HIRE ME</h1>
+        <div className="flex gap-3">
+          <ContactForm />
+          <div className="w-1/2  rounded-lg">
+            <h1 className=" text-white">email: adrian Wang</h1>
+            <h1 className=" text-white">email</h1>
+            <h1 className=" text-white">email</h1>
+            <h1 className=" text-white">email</h1>
+          </div>
+        </div>
       </section>
-
-      {/* <Card className="w-1/2 mx-auto text-start">
-        <CardHeader>
-          <CardTitle className="">Create an Account</CardTitle>
-          <CardDescription className="">
-            Enter your email below to create your account
-          </CardDescription>
-          <div className="flex justify-center"></div>
-        </CardHeader>
-        <CardContent>
-          <Label htmlFor="email" className="">
-            Email
-          </Label>
-          <Input id="email" placeholder="email" />
-        </CardContent>
-        <CardFooter>
-          <PrimaryButton title="Click me" />
-        </CardFooter>
-      </Card>
-
-      <Accordion type="single" collapsible>
-        <AccordionItem
-          className="bg-[#F5F5F5] border border-black-600 mb-1 rounded-lg"
-          value="item-1"
-          onClick={toggleAccordion}
-        >
-          {isOpen ? (
-            <AccordionTrigger className="rounded bg-blue-500 ps-2 pe-2 text-white active:no-underline hover:no-underline">
-              Is it accessible?
-            </AccordionTrigger>
-          ) : (
-            <AccordionTrigger className="rounded  ps-2 pe-2 text-blue-400 active:no-underline hover:no-underline">
-              Is it accessible?
-            </AccordionTrigger>
-          )}
-
-          <AccordionContent className="bg-white border-2 ps-2 pt-2 text-start text-base h-24">
-            No, we don’t, but we have a huge range of amazing online products
-            for delivery to your door, plus we’re open 24/7.
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion> */}
     </>
   );
 }
