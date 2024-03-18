@@ -21,9 +21,11 @@ import {
 } from '@/components/ui/card';
 import {
   Container,
+  Phone,
   Mail,
   GraduationCap,
   FileCode,
+  MapPin,
   BadgeCheck,
   Backpack,
 } from 'lucide-react';
@@ -148,13 +150,22 @@ function App() {
 
       <section id="contactMe" className="mt-20">
         <h1 className="text-white text-3xl mb-[60px]">HIRE ME</h1>
-        <div className="flex gap-3">
+        <div className="flex flex-wrap sm:flex-nowrap  gap-3">
           <ContactForm />
-          <div className="w-1/2  rounded-lg">
-            <h1 className=" text-white">email: adrian Wang</h1>
-            <h1 className=" text-white">email</h1>
-            <h1 className=" text-white">email</h1>
-            <h1 className=" text-white">email</h1>
+          <div className="pt-3 w-full text-gray-400 rounded-lg flex flex-col gap-5">
+            <h1 className=" ">COTACT DETAILS</h1>
+            <div className="flex gap-2 justify-center">
+              <Mail />
+              <h1 className=" ">adrianwang911@gmail.com</h1>
+            </div>
+            <div className="flex gap-2 justify-center">
+              <Phone />
+              <h1 className=" ">+61 404988826</h1>
+            </div>
+            <div className="flex gap-2 justify-center">
+              <MapPin />
+              <h1 className=" ">Location: Melbourne Based</h1>
+            </div>
           </div>
         </div>
       </section>
