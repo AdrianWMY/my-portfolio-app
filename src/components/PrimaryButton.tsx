@@ -22,7 +22,7 @@ const PrimaryButton = ({
       className={`m-3 ${additionStyle} rounded-lg ${
         bgColor
           ? `bg-${bgColor}-700 hover:bg-${bgColor}-800`
-          : 'hover:bg-red-700'
+          : 'hover:bg-black-700'
       }`}
       onClick={onClickFuntion}
       disabled={disable}
