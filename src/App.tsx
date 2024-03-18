@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <section className="mt-[100px] md:flex md:justify-evenly">
+      <section className="mt-[50px] sm:mt-[100px] md:flex md:justify-evenly">
         <div className="md:w-full md:m-0 w-2/3 max-w-[400px] min-w-[200px] m-auto">
           <img className="rounded-full" src="testing.png" alt="" />
         </div>
