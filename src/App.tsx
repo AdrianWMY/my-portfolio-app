@@ -1,50 +1,14 @@
-import { useState } from 'react';
 import CusCard from './components/CusCard';
 import Badge from './components/Badge';
 import PrimaryButton from './components/PrimaryButton';
 import { scrollToSection } from './utils/helpers';
-import ClickCount from './components/ClickCount';
 import './App.css';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import {
-  Container,
-  Phone,
-  Mail,
-  GraduationCap,
-  FileCode,
-  MapPin,
-  BadgeCheck,
-  Backpack,
-} from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { Phone, Mail, GraduationCap, FileCode, MapPin } from 'lucide-react';
+
 import Navbar from './components/navbar';
 import ContactForm from './components/ContactForm';
 
 function App() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  9;
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
-
-  // const testingstyle = {
-  //   backgroundColor: 'red',
-  // };
-
   const handleDownload = () => {
     // Construct the relative URL to the PDF file
     const pdfUrl = '/Mingyang_Wang_Resume.pdf'; // Assuming the file is in the public folder
@@ -132,18 +96,19 @@ function App() {
         <h1 className="text-white text-3xl mb-[60px]"> PROJECTS</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center gap-10">
           <CusCard
-            imageUrl={'public/Screen Shot 2024-02-18 at 10.55.37 am.png'}
-            projectName={'Project One'}
+            imageUrl={'public/dex.jpg'}
+            projectName={'Dex Collection'}
+            href={'https://www.dexcollection.com.au/'}
+          />
+          <CusCard
+            imageUrl={'public/hqp.jpg'}
+            projectName={'High Quality Promo'}
             href={'https://www.hqpstaging.com.au/'}
           />
           <CusCard
-            imageUrl={'public/Screen Shot 2024-02-18 at 10.55.37 am.png'}
-            projectName={'Project TWO'}
-            href={'https://staging.premiercollection.au/'}
-          />
-          <CusCard
-            imageUrl={'public/Screen Shot 2024-02-18 at 10.55.37 am.png'}
-            projectName="Project THREE"
+            imageUrl={'public/pb.jpg'}
+            projectName="Promo Brands"
+            href={'https://www.promobrands.com.au/'}
           />
         </div>
       </section>
@@ -155,12 +120,20 @@ function App() {
           <div className="pt-3 w-full text-gray-400 rounded-lg flex flex-col gap-5">
             <h1 className=" ">COTACT DETAILS</h1>
             <div className="flex gap-2 justify-center">
-              <Mail />
-              <h1 className=" ">adrianwang911@gmail.com</h1>
+              <a href="mailto:adrianwang911@gmail.com">
+                <Mail />
+              </a>
+              <a href="mailto:adrianwang911@gmail.com">
+                <h1 className=" ">adrianwang911@gmail.com</h1>
+              </a>
             </div>
             <div className="flex gap-2 justify-center">
-              <Phone />
-              <h1 className=" ">+61 404988826</h1>
+              <a href="tel:+61 404988826">
+                <Phone />
+              </a>
+              <a href="tel:+61 404988826">
+                <h1 className=" ">+61 404988826</h1>
+              </a>
             </div>
             <div className="flex gap-2 justify-center">
               <MapPin />

@@ -1,7 +1,6 @@
 import PrimaryButton from './PrimaryButton';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Flag, Flashlight } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
 const ContactForm = () => {
@@ -13,7 +12,7 @@ const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitStatus('Submitting....');
     setIsDisabled(true);
@@ -33,29 +32,24 @@ const ContactForm = () => {
     };
 
     // Send the email using EmailJS
-    // emailjs
-    //   .send(serviceId, templateId, templateParams, publicKey)
-    //   .then((response) => {
-    //     console.log('Email sent successfully!', response);
-    //     setFirstname('');
-    //     setLastName('');
-    //     setEmail('');
-    //     setMessage('');
-    //     setSubmitStatus('Submit');
-    //     setIsDisabled(false);
-    //     setShowAlert(true);
-    //     setTimeout(() => {
-    //       setShowAlert(false);
-    //     }, 5000);
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error sending email:', error);
-    //   });
-
-    setShowAlert(true);
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 5000);
+    emailjs
+      .send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log('Email sent successfully!', response);
+        setFirstname('');
+        setLastName('');
+        setEmail('');
+        setMessage('');
+        setSubmitStatus('Submit');
+        setIsDisabled(false);
+        setShowAlert(true);
+        setTimeout(() => {
+          setShowAlert(false);
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
   };
 
   return (
@@ -79,6 +73,7 @@ const ContactForm = () => {
             value={firstName}
             onChange={(e) => setFirstname(e.target.value)}
             placeholder="First Name"
+            required
           />
           <input
             className="bg-gray-700	w-full text-gray-400 py-2 px-3 rounded-lg mb-2"
@@ -86,6 +81,7 @@ const ContactForm = () => {
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             placeholder="Last Name"
+            required
           />
         </div>
         <input
@@ -93,6 +89,7 @@ const ContactForm = () => {
           type="email"
           placeholder="Email"
           value={email}
+          required
           onChange={(e) => setEmail(e.target.value)}
         />
 
@@ -103,6 +100,7 @@ const ContactForm = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           className="bg-gray-700	w-full text-gray-400 py-2 px-3 rounded-lg mb-2"
+          required
         ></textarea>
         <PrimaryButton
           //   onClickFuntion={handleFormSubmit}

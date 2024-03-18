@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const ClickCount = () => {
   const [count, setCount] = useState(0);
