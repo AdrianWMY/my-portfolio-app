@@ -30,41 +30,49 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
-      <section className="mt-[50px] sm:mt-[100px] md:flex md:justify-evenly">
+      <section className="">
+        <div className="fixed top-0 left-0 w-full">
+          <Navbar></Navbar>
+        </div>
+      </section>
+      <section className=" mt-[50px] sm:mt-[100px] md:flex md:justify-evenly">
         <div className="md:w-full md:m-0 w-2/3 max-w-[400px] min-w-[200px] m-auto">
           <img className="rounded-full" src="testing.png" alt="" />
         </div>
 
         <div className="md:mt-[80px] mt-[40px]">
-          <span className="text-white text-lg text-slate-500">Hello, I'm</span>
-          <h1 className="text-white text-2xl mt-2">Adrian Wang</h1>
-          <h2 className="text-white text-xl mt-2 text-slate-400">
+          <span className="text-slate-200 text-lg text-slate-500">
+            Hello, I'm
+          </span>
+          <h1 className="text-slate-200 text-2xl mt-2">Adrian Wang</h1>
+          <h2 className="text-slate-200 text-xl mt-2 text-slate-400">
             Frontend Developer
           </h2>
           <PrimaryButton onClickFuntion={handleDownload} title="Download CV" />
           <PrimaryButton
-            onClickFuntion={() => scrollToSection('contactMe')}
+            onClickFuntion={(e: React.MouseEvent) =>
+              scrollToSection('contactMe', e)
+            }
             title={'Contact Info'}
           />
         </div>
       </section>
 
-      <section className="mt-[50px] sm:mt-[100px]" id="about">
-        <h1 className="text-white text-3xl">ABOUT ME</h1>
-        <div className="flex flex-wrap md:flex-nowrap justify-center  mt-[100px] ">
+      <section className="mt-[50px] sm:mt-[80px]" id="about">
+        <h1 className="text-slate-200 text-3xl mb-10">ABOUT ME</h1>
+        <div className="flex flex-wrap md:flex-nowrap justify-center">
           <div className="w-full max-w-[380px]">
             <img className="rounded-3xl" src="testing-2.png" alt="" />
           </div>
           <div className="md:w-2/3 w-full flex flex-wrap justify-around text-slate-400 pt-10">
             <div className="grid content-center w-80 h-40 border border-white-600 rounded-2xl ">
-              <GraduationCap className="m-auto w-10 h-10 text-white" />
-              <span className="text-xl text-white">Education</span>
+              <GraduationCap className="m-auto w-10 h-10 text-slate-200" />
+              <span className="text-xl text-slate-200">Education</span>
               <span className="">Bachelors Degree of Computer Science</span>
             </div>
             <div className="grid content-center w-80 h-40 border border-white-600 rounded-2xl ">
-              <FileCode className="m-auto w-10 h-10 text-white" />
-              <span className="text-xl text-white">Experience</span>
+              <FileCode className="m-auto w-10 h-10 text-slate-200" />
+              <span className="text-xl text-slate-200">Experience</span>
               <span className="">1 year Frontend Development</span>
             </div>
             <p className="text-start ps-8 pt-8">
@@ -78,8 +86,8 @@ function App() {
         </div>
       </section>
 
-      <section className="mt-[50px] sm:mt-[100px]" id="skills">
-        <h1 className="text-white text-3xl mb-[60px]"> SKILLS</h1>
+      <section className="mt-[50px] sm:mt-[80px]" id="skills">
+        <h1 className="text-slate-200 text-3xl mb-10"> SKILLS</h1>
         <div className="grid sm:grid-cols-3 grid-cols-2 place-content-around justify-items-center max-w-[800px] m-auto h-72 border border-white-600 rounded-2xl ">
           <Badge skillName="HTML" />
           <Badge skillName="CSS" />
@@ -92,8 +100,8 @@ function App() {
           <Badge skillName="Git" />
         </div>
       </section>
-      <section className="mt-[100px]" id="projects">
-        <h1 className="text-white text-3xl mb-[60px]"> PROJECTS</h1>
+      <section className="mt-[50px] sm:mt-[80px]" id="projects">
+        <h1 className="text-slate-200 text-3xl mb-10"> PROJECTS</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center gap-10">
           <CusCard
             imageUrl={'dex.jpg'}
@@ -113,8 +121,8 @@ function App() {
         </div>
       </section>
 
-      <section id="contactMe" className="mt-20">
-        <h1 className="text-white text-3xl mb-[60px]">HIRE ME</h1>
+      <section id="contactMe" className="mt-[50px] sm:mt-[80px]">
+        <h1 className="text-slate-200 text-3xl mb-10">HIRE ME</h1>
         <div className="flex flex-wrap sm:flex-nowrap  gap-3">
           <ContactForm />
           <div className="pt-3 w-full text-gray-400 rounded-lg flex flex-col gap-5">

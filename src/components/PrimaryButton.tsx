@@ -5,7 +5,7 @@ interface PrimaryButtonProps {
   bgColor?: string; //make the color prop optional
   additionStyle?: string;
   disable?: boolean;
-  onClickFuntion?: () => void;
+  onClickFuntion?: (e: React.MouseEvent) => void;
 }
 
 const PrimaryButton = ({
