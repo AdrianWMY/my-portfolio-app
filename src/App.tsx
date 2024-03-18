@@ -50,7 +50,7 @@ function App() {
         </div>
       </section>
 
-      <section className="mt-[100px]" id="about">
+      <section className="mt-[50px] sm:mt-[100px]" id="about">
         <h1 className="text-white text-3xl">ABOUT ME</h1>
         <div className="flex flex-wrap md:flex-nowrap justify-center  mt-[100px] ">
           <div className="w-full max-w-[380px]">
@@ -78,7 +78,7 @@ function App() {
         </div>
       </section>
 
-      <section className="mt-[100px]" id="skills">
+      <section className="mt-[50px] sm:mt-[100px]" id="skills">
         <h1 className="text-white text-3xl mb-[60px]"> SKILLS</h1>
         <div className="grid sm:grid-cols-3 grid-cols-2 place-content-around justify-items-center max-w-[800px] m-auto h-72 border border-white-600 rounded-2xl ">
           <Badge skillName="HTML" />
