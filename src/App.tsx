@@ -33,7 +33,7 @@ function App() {
       <Navbar></Navbar>
       <section className="mt-[100px] md:flex md:justify-evenly">
         <div className="md:w-full md:m-0 w-2/3 max-w-[400px] min-w-[200px] m-auto">
-          <img className="rounded-full" src="public/testing.png" alt="" />
+          <img className="rounded-full" src="testing.png" alt="" />
         </div>
 
         <div className="md:mt-[80px] mt-[40px]">
@@ -54,7 +54,7 @@ function App() {
         <h1 className="text-white text-3xl">ABOUT ME</h1>
         <div className="flex flex-wrap md:flex-nowrap justify-center  mt-[100px] ">
           <div className="w-full max-w-[380px]">
-            <img className="rounded-3xl" src="public/testing-2.png" alt="" />
+            <img className="rounded-3xl" src="testing-2.png" alt="" />
           </div>
           <div className="md:w-2/3 w-full flex flex-wrap justify-around text-slate-400 pt-10">
             <div className="grid content-center w-80 h-40 border border-white-600 rounded-2xl ">
@@ -96,17 +96,17 @@ function App() {
         <h1 className="text-white text-3xl mb-[60px]"> PROJECTS</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center gap-10">
           <CusCard
-            imageUrl={'public/dex.jpg'}
+            imageUrl={'dex.jpg'}
             projectName={'Dex Collection'}
             href={'https://www.dexcollection.com.au/'}
           />
           <CusCard
-            imageUrl={'public/hqp.jpg'}
+            imageUrl={'hqp.jpg'}
             projectName={'High Quality Promo'}
             href={'https://www.hqpstaging.com.au/'}
           />
           <CusCard
-            imageUrl={'public/pb.jpg'}
+            imageUrl={'pb.jpg'}
             projectName="Promo Brands"
             href={'https://www.promobrands.com.au/'}
           />
