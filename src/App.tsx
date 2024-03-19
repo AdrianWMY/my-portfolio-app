@@ -113,11 +113,11 @@ function App() {
             projectName="Promo Brands"
             href={'https://www.promobrands.com.au/'}
           />
-          <CusCard
+          {/* <CusCard
             imageUrl={'dex.jpg'}
             projectName={'Dex Collection'}
             href={'https://www.dexcollection.com.au/'}
-          />
+          /> */}
         </div>
       </section>
 
