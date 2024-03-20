@@ -58,31 +58,31 @@ function App() {
         </div>
       </section>
 
-      <section className="mt-[50px] sm:mt-[80px]" id="about">
-        <h1 className="text-slate-200 text-3xl mb-10">ABOUT ME</h1>
-        <div className="flex flex-wrap md:flex-nowrap justify-center">
-          <div className="w-full max-w-[380px]">
+      <section className="mt-[50px] sm:mt-[80px] " id="about">
+        <h1 className="text-slate-200 text-3xl mb-10 ">ABOUT ME</h1>
+        <div className="grid  md:grid-cols-2 lg:grid-cols-3 justify-items-center content-center ">
+          <div className=" lg:row-span-2 align-self-center md:w-full md:m-0 w-2/3 min-w-[300px] max-w-[380px] ">
             <img className="rounded-3xl" src="Designer (2).png" alt="" />
           </div>
-          <div className="md:w-2/3 w-full flex flex-wrap justify-around text-slate-400 pt-10">
-            <div className="grid content-center w-80 h-40 border border-white-600 rounded-2xl ">
-              <GraduationCap className="m-auto w-10 h-10 text-slate-200" />
+          <div className="  lg:col-span-2 flex flex-wrap  justify-around items-center text-slate-400 w-full p-4 gap-2">
+            <div className="flex flex-col justify-center items-center  w-full sm:w-[285px] h-40 border border-white-600 rounded-2xl ">
+              <GraduationCap className=" w-10 h-10 text-slate-200" />
               <span className="text-xl text-slate-200">Education</span>
               <span className="">Bachelors Degree of Computer Science</span>
             </div>
-            <div className="grid content-center w-80 h-40 border border-white-600 rounded-2xl ">
-              <FileCode className="m-auto w-10 h-10 text-slate-200" />
+            <div className="flex flex-col justify-center items-center  w-full sm:w-[285px] h-40 border border-white-600 rounded-2xl ">
+              <FileCode className="w-10 h-10 text-slate-200" />
               <span className="text-xl text-slate-200">Experience</span>
               <span className="">1 year Frontend Development</span>
             </div>
-            <p className="text-start ps-8 pt-8">
-              Passionate and ambitious computer science graduate with a strong
-              foundation in programming languages. Seeking a full-time web
-              developer position to apply my skills in web application
-              development. I am highly motivated to contribute to the creation
-              of innovative solutions and make a positive impact.
-            </p>
           </div>
+          <p className=" md:col-span-2  text-slate-400 text-start p-3">
+            Passionate and ambitious computer science graduate with a strong
+            foundation in programming languages. Seeking a full-time web
+            developer position to apply my skills in web application
+            development. I am highly motivated to contribute to the creation of
+            innovative solutions and make a positive impact.
+          </p>
         </div>
       </section>
 
@@ -108,7 +108,7 @@ function App() {
             projectName={'High Quality Promo'}
             href={'https://www.hqpstaging.com.au/'}
           />
-          {/* <CusCard
+          <CusCard
             imageUrl={'pb.jpg'}
             projectName="Promo Brands"
             href={'https://www.promobrands.com.au/'}
@@ -117,7 +117,7 @@ function App() {
             imageUrl={'dex.jpg'}
             projectName={'Dex Collection'}
             href={'https://www.dexcollection.com.au/'}
-          /> */}
+          />
         </div>
       </section>
 
