@@ -102,7 +102,7 @@ function App() {
       </section>
       <section className="mt-[50px] sm:mt-[80px]" id="projects">
         <h1 className="text-slate-200 text-3xl mb-10"> PROJECTS</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center gap-10">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 justify-items-center">
           <CusCard
             imageUrl={'hqp.jpg'}
             projectName={'High Quality Promo'}
