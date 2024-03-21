@@ -125,7 +125,7 @@ function App() {
         <h1 className="text-slate-200 text-3xl mb-10">HIRE ME</h1>
         <div className="flex flex-wrap sm:flex-nowrap  gap-3">
           <ContactForm />
-          <div className="pt-3 w-full text-gray-400 rounded-lg flex flex-col gap-5">
+          <div className="pt-5 sm:pt-10 w-full text-gray-400 rounded-lg flex flex-col gap-5 sm:gap-10 ">
             <h1 className=" ">COTACT DETAILS</h1>
             <div className="flex gap-2 justify-center">
               <a href="mailto:adrianwang911@gmail.com">
