@@ -119,7 +119,7 @@ function App() {
             }}
             plugins={[
               Autoplay({
-                delay: 2000,
+                delay: 3000,
                 stopOnInteraction: false,
                 stopOnMouseEnter: true,
               }),
