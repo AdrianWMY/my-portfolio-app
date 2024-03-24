@@ -1,14 +1,26 @@
+import * as React from 'react';
 import CusCard from './components/CusCard';
 import Badge from './components/Badge';
 import PrimaryButton from './components/PrimaryButton';
 import { scrollToSection } from './utils/helpers';
 import './App.css';
 import { Phone, Mail, GraduationCap, FileCode, MapPin } from 'lucide-react';
+import { useMediaQuery } from 'react-responsive';
+import Autoplay from 'embla-carousel-autoplay';
+// import { useEffect, useRef } from 'react';
 
 import Navbar from './components/navbar';
 import ContactForm from './components/ContactForm';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 function App() {
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' });
   const handleDownload = () => {
     // Construct the relative URL to the PDF file
     const pdfUrl = '/Mingyang_Wang_Resume.pdf'; // Assuming the file is in the public folder
@@ -31,7 +43,7 @@ function App() {
   return (
     <>
       <section className="">
-        <div className="fixed top-0 left-0 w-full">
+        <div className="fixed z-[1] top-0 left-0 w-full">
           <Navbar></Navbar>
         </div>
       </section>
@@ -41,13 +53,9 @@ function App() {
         </div>
 
         <div className="md:mt-[80px] mt-[40px]">
-          <span className="text-slate-200 text-lg text-slate-500">
-            Hello, I'm
-          </span>
+          <span className="text-lg text-slate-500">Hello, I'm</span>
           <h1 className="text-slate-200 text-2xl mt-2">Adrian Wang</h1>
-          <h2 className="text-slate-200 text-xl mt-2 text-slate-400">
-            Frontend Developer
-          </h2>
+          <h2 className=" text-xl mt-2 text-slate-400">Frontend Developer</h2>
           <PrimaryButton onClickFuntion={handleDownload} title="Download CV" />
           <PrimaryButton
             onClickFuntion={(e: React.MouseEvent) =>
@@ -102,23 +110,66 @@ function App() {
       </section>
       <section className="mt-[50px] sm:mt-[80px]" id="projects">
         <h1 className="text-slate-200 text-3xl mb-10"> PROJECTS</h1>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 justify-items-center">
-          <CusCard
-            imageUrl={'hqp.jpg'}
-            projectName={'High Quality Promo'}
-            href={'https://www.hqpstaging.com.au/'}
-          />
-          <CusCard
-            imageUrl={'pb.jpg'}
-            projectName="Promo Brands"
-            href={'https://www.promobrands.com.au/'}
-          />
-          <CusCard
-            imageUrl={'dex.jpg'}
-            projectName={'Dex Collection'}
-            href={'https://www.dexcollection.com.au/'}
-          />
-        </div>
+
+        {isSmallScreen ? (
+          <Carousel
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 2000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: true,
+              }),
+            ]}
+          >
+            <CarouselContent className="">
+              <CarouselItem className="sm:basis-1/2 ">
+                <CusCard
+                  imageUrl={'hqp.jpg'}
+                  projectName={'High Quality Promo'}
+                  href={'https://www.hqpstaging.com.au/'}
+                />
+              </CarouselItem>
+              <CarouselItem className="sm:basis-1/2 ">
+                <CusCard
+                  imageUrl={'pb.jpg'}
+                  projectName="Promo Brands"
+                  href={'https://www.promobrands.com.au/'}
+                />
+              </CarouselItem>
+              <CarouselItem className="sm:basis-1/2 ">
+                <CusCard
+                  imageUrl={'dex.jpg'}
+                  projectName={'Dex Collection'}
+                  href={'https://www.dexcollection.com.au/'}
+                />
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious className="left-[-1.5rem] bg-slate-300" />
+            <CarouselNext className="right-[-1.5rem] bg-slate-300" />
+          </Carousel>
+        ) : (
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 justify-items-center">
+            <CusCard
+              imageUrl={'hqp.jpg'}
+              projectName={'High Quality Promo'}
+              href={'https://www.hqpstaging.com.au/'}
+            />
+            <CusCard
+              imageUrl={'pb.jpg'}
+              projectName="Promo Brands"
+              href={'https://www.promobrands.com.au/'}
+            />
+            <CusCard
+              imageUrl={'dex.jpg'}
+              projectName={'Dex Collection'}
+              href={'https://www.dexcollection.com.au/'}
+            />
+          </div>
+        )}
       </section>
 
       <section id="contactMe" className="mt-[50px] sm:mt-[80px]">

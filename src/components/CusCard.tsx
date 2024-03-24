@@ -8,7 +8,7 @@ interface CusCardProps {
 
 const CusCard = ({ imageUrl, projectName, href }: CusCardProps) => {
   return (
-    <div className="max-w-[280px] pt-5 w-full border rounded-3xl">
+    <div className="max-w-[280px] pt-5 w-full border rounded-3xl m-auto">
       <img
         className="w-[200px] h-[300px] sm:h-[350px] rounded-xl  m-auto"
         src={imageUrl}
