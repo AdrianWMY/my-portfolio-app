@@ -6,7 +6,7 @@ interface BadgeProps {
 
 const Badge = ({ skillName }: BadgeProps) => {
   return (
-    <div className="text-white flex sm:w-40 w-32  ">
+    <div className="text-slate-200 flex sm:w-40 w-32  ">
       <BadgeCheck />
       <span className=" ms-5 sm:text-xl text-md">{skillName}</span>
     </div>

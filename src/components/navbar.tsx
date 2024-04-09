@@ -9,8 +9,10 @@ function Navbar() {
   };
   return (
     <nav className=" flex items-center justify-between lg:justify-around xl:justify-evenly  flex-wrap bg-gray-800 p-4">
-      <div className=" text-white mr-6">
-        <span className="text-white font-semibold text-2xl">Adrian Wang</span>
+      <div className="mr-6">
+        <span className="text-slate-200 font-semibold text-2xl">
+          Adrian Wang
+        </span>
       </div>
       <div className="block md:hidden">
         <button
@@ -45,14 +47,14 @@ function Navbar() {
           isOpen ? 'block' : 'hidden'
         } md:flex md:items-center md:w-auto`}
       >
-        <div className="md:flex-grow  md:space-x-7">
+        <div className="md:flex-grow  md:space-x-7 text-slate-200">
           <a
             href="#"
             onClick={(e) => {
               scrollToSection('about', e);
               setIsOpen(false);
             }}
-            className="block mt-4 md:inline-block md:mt-0 text-white hover:bg-gray-700 px-3 py-2 rounded-md"
+            className="block mt-4 md:inline-block md:mt-0 hover:bg-gray-700 px-3 py-2 rounded-md"
           >
             About
           </a>
@@ -62,7 +64,7 @@ function Navbar() {
               scrollToSection('skills', e);
               setIsOpen(false);
             }}
-            className="block mt-4 md:inline-block md:mt-0 text-white hover:bg-gray-700 px-3 py-2 rounded-md"
+            className="block mt-4 md:inline-block md:mt-0 hover:bg-gray-700 px-3 py-2 rounded-md"
           >
             Experience
           </a>
@@ -72,7 +74,7 @@ function Navbar() {
               scrollToSection('projects', e);
               setIsOpen(false);
             }}
-            className="block mt-4 md:inline-block md:mt-0 text-white hover:bg-gray-700 px-3 py-2 rounded-md"
+            className="block mt-4 md:inline-block md:mt-0 hover:bg-gray-700 px-3 py-2 rounded-md"
           >
             Projects
           </a>
@@ -82,7 +84,7 @@ function Navbar() {
               scrollToSection('contactMe', e);
               setIsOpen(false);
             }}
-            className="block mt-4 md:inline-block md:mt-0 text-white hover:bg-gray-700 px-3 py-2 rounded-md"
+            className="block mt-4 md:inline-block md:mt-0 hover:bg-gray-700 px-3 py-2 rounded-md"
           >
             Contact
           </a>

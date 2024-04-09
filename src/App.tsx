@@ -4,7 +4,14 @@ import Badge from './components/Badge';
 import PrimaryButton from './components/PrimaryButton';
 import { scrollToSection } from './utils/helpers';
 import './App.css';
-import { Phone, Mail, GraduationCap, FileCode, MapPin } from 'lucide-react';
+import {
+  Phone,
+  Mail,
+  GraduationCap,
+  FileCode,
+  MapPin,
+  Linkedin,
+} from 'lucide-react';
 import { useMediaQuery } from 'react-responsive';
 import Autoplay from 'embla-carousel-autoplay';
 // import { useEffect, useRef } from 'react';
@@ -56,13 +63,25 @@ function App() {
           <span className="text-lg text-slate-500">Hello, I'm</span>
           <h1 className="text-slate-200 text-2xl mt-2">Adrian Wang</h1>
           <h2 className=" text-xl mt-2 text-slate-400">Frontend Developer</h2>
-          <PrimaryButton onClickFuntion={handleDownload} title="Download CV" />
-          <PrimaryButton
-            onClickFuntion={(e: React.MouseEvent) =>
-              scrollToSection('contactMe', e)
-            }
-            title={'Contact Info'}
-          />
+
+          <div className="flex justify-center items-center flex-col sm:flex-row">
+            <PrimaryButton
+              onClickFuntion={handleDownload}
+              title="Download CV"
+            />
+            <PrimaryButton
+              onClickFuntion={(e: React.MouseEvent) =>
+                scrollToSection('contactMe', e)
+              }
+              title={'Contact Info'}
+            />
+            <a
+              href="https://www.linkedin.com/in/adrian-wang-b79730268/"
+              target="_blank"
+            >
+              <Linkedin className="text-slate-200 w-10 h-10 p-2 bg-slate-900 hover:bg-gray-700 rounded-lg" />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -73,12 +92,12 @@ function App() {
             <img className="rounded-3xl" src="Designer (2).png" alt="" />
           </div>
           <div className="  lg:col-span-2 flex flex-wrap  justify-around items-center text-slate-400 w-full p-4 gap-2">
-            <div className="flex flex-col justify-center items-center  w-full sm:w-[285px] h-40 border border-white-600 rounded-2xl ">
+            <div className="flex flex-col justify-center items-center  w-full sm:w-[285px] h-40 border-2 border-slate-400 shadow-md shadow-slate-500/50 rounded-2xl ">
               <GraduationCap className=" w-10 h-10 text-slate-200" />
               <span className="text-xl text-slate-200">Education</span>
               <span className="">Bachelors Degree of Computer Science</span>
             </div>
-            <div className="flex flex-col justify-center items-center  w-full sm:w-[285px] h-40 border border-white-600 rounded-2xl ">
+            <div className="flex flex-col justify-center items-center  w-full sm:w-[285px] h-40 border-2 border-slate-400 shadow-md shadow-slate-500/50 rounded-2xl ">
               <FileCode className="w-10 h-10 text-slate-200" />
               <span className="text-xl text-slate-200">Experience</span>
               <span className="">1 year Frontend Development</span>
@@ -96,7 +115,7 @@ function App() {
 
       <section className="mt-[50px] sm:mt-[80px]" id="skills">
         <h1 className="text-slate-200 text-3xl mb-10"> SKILLS</h1>
-        <div className="grid sm:grid-cols-3 grid-cols-2 place-content-around justify-items-center max-w-[800px] m-auto h-72 border border-white-600 rounded-2xl ">
+        <div className="grid sm:grid-cols-3 grid-cols-2 place-content-around justify-items-center max-w-[800px] m-auto h-72 border-2 border-slate-400 shadow-md shadow-slate-500/50 rounded-2xl ">
           <Badge skillName="HTML" />
           <Badge skillName="CSS" />
           <Badge skillName="JavaScript" />
