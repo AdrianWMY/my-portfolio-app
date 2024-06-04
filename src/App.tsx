@@ -25,17 +25,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' });
   const handleDownload = () => {
     // Construct the relative URL to the PDF file
-    const pdfUrl = '/Mingyang_Wang_Resume.pdf'; // Assuming the file is in the public folder
+    const pdfUrl = '/Adrian_Wang_Resume.pdf'; // Assuming the file is in the public folder
 
     // Create a temporary link element
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.setAttribute('download', '/Mingyang_Wang_Resume.pdf');
+    link.setAttribute('download', '/Adrian_Wang_Resume.pdf');
 
     // Append the link to the body
     document.body.appendChild(link);
@@ -220,6 +221,7 @@ function App() {
           </div>
         </div>
       </section>
+      <Analytics />
     </>
   );
 }
