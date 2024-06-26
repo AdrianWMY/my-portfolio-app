@@ -176,7 +176,7 @@ function App() {
             <CusCard
               imageUrl={'hqp.jpg'}
               projectName={'High Quality Promo'}
-              href={'https://www.hqpstaging.com.au/'}
+              href={'https://www.highqualitypromo.com.au/'}
             />
             <CusCard
               imageUrl={'pb.jpg'}
