@@ -162,9 +162,9 @@ function App() {
               </CarouselItem>
               <CarouselItem className="sm:basis-1/2 ">
                 <CusCard
-                  imageUrl={'dex.jpg'}
-                  projectName={'Dex Collection'}
-                  href={'https://www.dexcollection.com.au/'}
+                  imageUrl={'pc.jpg'}
+                  projectName={'Premier Collection'}
+                  href={'https://staging.premiercollection.au/'}
                 />
               </CarouselItem>
             </CarouselContent>
@@ -184,9 +184,9 @@ function App() {
               href={'https://www.promobrands.com.au/'}
             />
             <CusCard
-              imageUrl={'dex.jpg'}
-              projectName={'Dex Collection'}
-              href={'https://www.dexcollection.com.au/'}
+              imageUrl={'pc.jpg'}
+              projectName={'Premier Collection'}
+              href={'https://staging.premiercollection.au/'}
             />
           </div>
         )}
