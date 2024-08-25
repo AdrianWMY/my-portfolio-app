@@ -105,11 +105,13 @@ function App() {
             </div>
           </div>
           <p className=" md:col-span-2  text-slate-400 text-start p-3">
-            Passionate and ambitious computer science graduate with a strong
-            foundation in programming languages. Seeking a full-time web
-            developer position to apply my skills in web application
-            development. I am highly motivated to contribute to the creation of
-            innovative solutions and make a positive impact.
+            Full Stack Developer skilled in building responsive web applications
+            and e-commerce sites using ReactJS, and modern frameworks like
+            Tailwind CSS and Shadcn-UI. Proficient in back-end development with
+            Express.js for API creation, AWS Lambda, and API Gateway for
+            serverless architecture. Experienced in WordPress development, API
+            integration, and optimizing site performance. Adept at using Agile
+            methodologies to deliver scalable, high-quality solutions.
           </p>
         </div>
       </section>
