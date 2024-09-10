@@ -66,10 +66,10 @@ function App() {
           <h2 className=" text-xl mt-2 text-slate-400">Frontend Developer</h2>
 
           <div className="flex justify-center items-center flex-col sm:flex-row">
-            <PrimaryButton
+            {/* <PrimaryButton
               onClickFuntion={handleDownload}
               title="Download CV"
-            />
+            /> */}
             <PrimaryButton
               onClickFuntion={(e: React.MouseEvent) =>
                 scrollToSection('contactMe', e)
