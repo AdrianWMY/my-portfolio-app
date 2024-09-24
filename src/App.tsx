@@ -166,7 +166,7 @@ function App() {
                 <CusCard
                   imageUrl={'pc.jpg'}
                   projectName={'Premier Collection'}
-                  href={'https://staging.premiercollection.au/'}
+                  href={'https://www.premiercollection.com.au/'}
                 />
               </CarouselItem>
             </CarouselContent>
@@ -188,7 +188,7 @@ function App() {
             <CusCard
               imageUrl={'pc.jpg'}
               projectName={'Premier Collection'}
-              href={'https://staging.premiercollection.au/'}
+              href={'https://www.premiercollection.com.au/'}
             />
           </div>
         )}
