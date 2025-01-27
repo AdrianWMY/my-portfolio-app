@@ -29,24 +29,24 @@ import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' });
-  // const handleDownload = () => {
-  //   // Construct the relative URL to the PDF file
-  //   const pdfUrl = '/Adrian_Wang_Resume.pdf'; // Assuming the file is in the public folder
+  const handleDownload = () => {
+    // Construct the relative URL to the PDF file
+    const pdfUrl = '/Adrian_Wang_Resume.pdf'; // Assuming the file is in the public folder
 
-  //   // Create a temporary link element
-  //   const link = document.createElement('a');
-  //   link.href = pdfUrl;
-  //   link.setAttribute('download', '/Adrian_Wang_Resume.pdf');
+    // Create a temporary link element
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.setAttribute('download', '/Adrian_Wang_Resume.pdf');
 
-  //   // Append the link to the body
-  //   document.body.appendChild(link);
+    // Append the link to the body
+    document.body.appendChild(link);
 
-  //   // Trigger the click event on the link
-  //   link.click();
+    // Trigger the click event on the link
+    link.click();
 
-  //   // Clean up: remove the link from the DOM
-  //   document.body.removeChild(link);
-  // };
+    // Clean up: remove the link from the DOM
+    document.body.removeChild(link);
+  };
 
   return (
     <>
@@ -66,10 +66,10 @@ function App() {
           <h2 className=" text-xl mt-2 text-slate-400">Frontend Developer</h2>
 
           <div className="flex justify-center items-center flex-col sm:flex-row">
-            {/* <PrimaryButton
+            <PrimaryButton
               onClickFuntion={handleDownload}
               title="Download CV"
-            /> */}
+            />
             <PrimaryButton
               onClickFuntion={(e: React.MouseEvent) =>
                 scrollToSection('contactMe', e)
