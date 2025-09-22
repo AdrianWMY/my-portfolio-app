@@ -21,6 +21,7 @@
     "embla-carousel-autoplay": "^8.0.0",
     "embla-carousel-react": "^8.0.0",
     "lucide-react": "^0.298.0",
+    "node": "^24.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-responsive": "^10.0.0",
